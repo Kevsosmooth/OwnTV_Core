@@ -2449,6 +2449,10 @@
     <string name="settings_nav_docked">Docked</string>
     <!-- Translators: Explains the option above. -->
     <string name="settings_nav_docked_desc">Always on screen; the content makes room</string>
+    <!-- Translators: Navigation style option: a full-height menu that is hidden while you browse and opens with its names. -->
+    <string name="settings_nav_panel">Full height</string>
+    <!-- Translators: Explains the option above. The arrows are the remote's Left key; use the key that points to the side the menu is on. -->
+    <string name="settings_nav_panel_desc">Hidden while you browse; ◀ opens it with its names, and the content moves aside</string>
     <!-- Translators: Setting: how long the floating rail waits before it hides. -->
     <string name="settings_nav_hide_after">Hide after</string>
     <!-- Translators: Explains the Hide after setting; it only applies to the Floating style. -->
