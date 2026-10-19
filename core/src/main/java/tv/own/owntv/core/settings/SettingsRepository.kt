@@ -498,7 +498,6 @@ class SettingsRepository(private val context: Context, private val localeStore: 
         val VOD_VIEW_MODE = stringPreferencesKey("vod_view_mode")
         val VOD_LAYOUT = stringPreferencesKey("vod_layout")
         val LIVE_LAYOUT = stringPreferencesKey("live_layout")
-        val GUIDE_STYLE = stringPreferencesKey("guide_style")
         val LIVE_VIEW = stringPreferencesKey("live_view")
         val REMINDER_MODE = stringPreferencesKey("reminder_mode")
         val REMINDER_LEAD_MIN = intPreferencesKey("reminder_lead_min")
@@ -1206,7 +1205,8 @@ class SettingsRepository(private val context: Context, private val localeStore: 
     /**
      * Where the navigation rail sits. FLOATING floats over the content and always hides itself; DOCKED
      * (the default: Docked · Compact · Fit) stays on screen and the content makes room for it; PANEL is
-     * gone while you browse, then on ◀ a full-height menu with its names, the content moving aside.
+     * gone while you browse, then on ◀ a full-height menu with its names, the content moving aside; with it
+     * the TV Guide fills the screen the way TiviMate's does (bigger rows, its tools and categories on ◀).
      */
     enum class NavStyle { FLOATING, DOCKED, PANEL }
 
@@ -1370,20 +1370,6 @@ class SettingsRepository(private val context: Context, private val localeStore: 
     }
     suspend fun setVodLayout(layout: VodLayout) {
         context.dataStore.edit { it[Keys.VOD_LAYOUT] = layout.name }
-    }
-
-    /**
-     * How the TV Guide is drawn. STANDARD is the Stage guide: the rail, a control line and slim rows.
-     * FULL fills the screen the way TiviMate does: no rail or control line (Left opens a full-height
-     * menu with the sections, the guide's tools and the categories), about seven taller rows with a
-     * big logo, and one-line programme cells.
-     */
-    enum class GuideStyle { STANDARD, FULL }
-    val guideStyle: Flow<GuideStyle> = prefsFlow { prefs ->
-        prefs[Keys.GUIDE_STYLE]?.let { runCatching { GuideStyle.valueOf(it) }.getOrNull() } ?: GuideStyle.STANDARD
-    }
-    suspend fun setGuideStyle(style: GuideStyle) {
-        context.dataStore.edit { it[Keys.GUIDE_STYLE] = style.name }
     }
 
     /**
@@ -3067,7 +3053,7 @@ class SettingsRepository(private val context: Context, private val localeStore: 
             Keys.MAIN_FONT_FAMILY, Keys.POPUP_FONT_FAMILY,
             Keys.PREF_AUDIO_LANG, Keys.PREF_SUB_LANG, Keys.SUB_SEARCH_LANGS, Keys.SORT_LIVE, Keys.SORT_GUIDE, Keys.SORT_MOVIES,
             Keys.SORT_SERIES, Keys.RESUME_MODE, Keys.TIMESHIFT_RESUME_MODE, Keys.DOWNLOAD_WATCH_CHOICE, Keys.CATCHUP_TZ, Keys.CATCHUP_PLAYER, Keys.ANIMATION_LEVEL, Keys.VOD_VIEW_MODE, Keys.GUIDE_VIEW,
-            Keys.EPISODE_VIEW_MODE, Keys.VOD_LAYOUT, Keys.LIVE_LAYOUT, Keys.GUIDE_STYLE, Keys.LIVE_VIEW, Keys.REMINDER_MODE,
+            Keys.EPISODE_VIEW_MODE, Keys.VOD_LAYOUT, Keys.LIVE_LAYOUT, Keys.LIVE_VIEW, Keys.REMINDER_MODE,
             Keys.WEATHER_LOCATION, Keys.RECENT_SEARCHES,
             Keys.CLOCK_TIME_COLOR, Keys.CLOCK_DATE_COLOR, Keys.CLOCK_WEATHER_COLOR,
             // Global proxy — non-secret fields only. The proxy password (Keys.PROXY_PASS) is NEVER part of

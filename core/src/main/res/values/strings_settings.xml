@@ -2449,10 +2449,10 @@
     <string name="settings_nav_docked">Docked</string>
     <!-- Translators: Explains the option above. -->
     <string name="settings_nav_docked_desc">Always on screen; the content makes room</string>
-    <!-- Translators: Navigation style option: a full-height menu that is hidden while you browse and opens with its names. -->
-    <string name="settings_nav_panel">Full height</string>
+    <!-- Translators: Navigation style option: a full-height menu that is hidden while you browse and opens with its names; the TV Guide fills the screen. -->
+    <string name="settings_nav_panel">Side panel</string>
     <!-- Translators: Explains the option above. The arrows are the remote's Left key; use the key that points to the side the menu is on. -->
-    <string name="settings_nav_panel_desc">Hidden while you browse; ◀ opens it with its names, and the content moves aside</string>
+    <string name="settings_nav_panel_desc">Hidden while you browse; ◀ opens it full height with its names. The TV Guide fills the screen</string>
     <!-- Translators: Setting: how long the floating rail waits before it hides. -->
     <string name="settings_nav_hide_after">Hide after</string>
     <!-- Translators: Explains the Hide after setting; it only applies to the Floating style. -->
@@ -2480,7 +2480,7 @@
     <!-- Translators: Description of settings_sheet_counts. "Sheets" are the panels that slide up from the bottom. -->
     <string name="settings_sheet_counts_desc">Channel and title counts in the sheets</string>
     <!-- Translators: Hidden keyword bag for the Navigation settings. Translate as individual search terms. -->
-    <string name="settings_search_keywords_navigation">rail, sidebar, menu, navigation, hide, floating, docked, size, compact, wide, length, full height</string>
+    <string name="settings_search_keywords_navigation">rail, sidebar, menu, navigation, hide, floating, docked, size, compact, wide, length, full height, side panel, tivimate</string>
     <!-- Translators: Small heading above a settings popup title: where the setting lives, e.g. "SETTINGS · LAYOUT". Keep the separator unless your language uses another one. -->
     <string name="settings_breadcrumb_eyebrow"><xliff:g id="section">%1$s</xliff:g> · <xliff:g id="group">%2$s</xliff:g></string>
     <!-- Translators: Explains the rail Size setting: what each of its four sizes shows. -->
@@ -2520,18 +2520,6 @@
     <string name="settings_live_layout_separate_description">Categories, the channel list and the preview side by side.</string>
     <!-- Translators: Hidden keyword bag for the Live TV layout setting. Translate as individual search terms. -->
     <string name="settings_search_keywords_live_layout">layout live tv channels categories sheet panels stage</string>
-    <!-- Translators: Settings row title: how the TV Guide is laid out. -->
-    <string name="settings_guide_style">TV Guide style</string>
-    <!-- Translators: Subtitle of the TV Guide style setting. -->
-    <string name="settings_guide_style_description">The Stage guide, or a full-screen guide with bigger rows</string>
-    <!-- Translators: TV Guide style option: the Stage guide with the navigation rail and a control line. -->
-    <string name="settings_guide_style_standard">Standard</string>
-    <!-- Translators: Description of the Standard option for the TV Guide style. -->
-    <string name="settings_guide_style_standard_description">The navigation rail, a line of guide controls and slim rows.</string>
-    <!-- Translators: TV Guide style option: the guide fills the whole screen. -->
-    <string name="settings_guide_style_full">Full</string>
-    <!-- Translators: Description of the Full option for the TV Guide style. -->
-    <string name="settings_guide_style_full_description">The guide fills the screen with about seven bigger rows. Press Left for the menu, the guide controls and the categories.</string>
     <!-- Translators: Heading of the full-height menu in the Full TV Guide, above the guide controls (Today, Now, Category and so on). -->
     <string name="content_epg_full_tools">Guide</string>
     <!-- Translators: Panel-width stepper, Live TV in the Stage layout: how wide the categories sheet opens over the list. -->
@@ -2564,8 +2552,6 @@
     <string name="settings_search_keywords_reminders">reminder remind alert notify program programme start switch</string>
     <!-- Translators: Search keywords for the Live TV opens in setting. Space-separated, lower case. -->
     <string name="settings_search_keywords_live_opens_in">live tv opens start list guide grid view</string>
-    <!-- Translators: Search keywords for the TV Guide style setting (Standard or Full). Space-separated, lower case. -->
-    <string name="settings_search_keywords_guide_style">tv guide epg style full standard bigger rows tivimate</string>
     <!-- Translators: Panel widths summary in the Cinematic layout: the categories sheet width and the details height, both in percent. -->
     <string name="settings_panel_width_summary_cinematic">Categories sheet <xliff:g id="sheet">%1$d</xliff:g>%% · Details height <xliff:g id="height">%2$d</xliff:g>%%</string>
     <!-- Translators: Under the Categories sheet stepper in the Cinematic layout: the sheet opens with Left over the posters. -->
